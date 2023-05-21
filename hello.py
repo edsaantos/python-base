@@ -1,21 +1,22 @@
 #!/usr/bin/env python3
 """Hello World multi language.
+
 Depending on the language set in the environment, the program
 displays the corresponding message.
 
 How to use:
 
-Make sure the LANG variable is properly configured,
-check the variable with 'env' or create the variable with 'export':
+Make sure the LANG variable is properly configured.
+Check the variable with 'env' or create the variable with 'export' commands:
 
     env | grep LANG
-    ou
+    or
     export LANG=pt_BR.UTF-8
 
 Execution:
 
     python3 hello.py
-    ou
+    or
     ./hello.py
 """
 __version__ = '0.0.1'
