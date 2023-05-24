@@ -1,29 +1,30 @@
-#!/usr/bin/env python
-"""Exibe a tabuada de multiplicação de 1 a 10.
+#!/usr/bin/env python3
+"""Display Multiplication Table for numbers 1 to 10.
 
 Ex:
 
-Tabuada do 1:
-1
-2
-3
+---Multiplication Table for 1---
+    1 x 1 = 1
+    1 x 2 = 2
+    1 x 3 = 3
 ...
--------------
-Tabuada do 2:
-2
-4
-6
+############################################################
+---Multiplication Table for 2---
+    2 x 1 = 2
+    2 x 2 = 4
+    2 x 3 = 6
 ...
---------------
+############################################################
 """
-__version__ = '0.0.1'
+__version__ = '0.1.1'
 __author__ = 'https://github.com/edsaantos/'
 __license__ = 'Unlisence'
 
-tabuada = list(range(1, 11))
+table = list(range(1, 11))
 
-for numeros in tabuada:
-    print('Tabuada do', numeros,':')
-    for numero in tabuada:
-        print(numero * numeros)
-    print('-' * 14)
+for number_one in table:
+    print('{:^80}'.format(f'---Multiplication Table for {number_one}---\n'))
+    for number_two in table:
+        result = number_one * number_two
+        print('{:^80}'.format(f'{number_one} x {number_two} = {result}'), '\n')
+    print('{:^80}'.format('#' * 60), '\n')
