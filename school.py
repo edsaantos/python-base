@@ -4,7 +4,7 @@
 Print the list of students grouped by room,
 who attend each of the activities.
 '''
-__version__ = '0.1.0'
+__version__ = '0.1.1'
 __author__ = 'https://github.com/edsaantos'
 __license__ = 'Unlisence'
 
@@ -25,14 +25,8 @@ for activity_name, activity in activities:
     
     print(f'Students enrolled in the {activity_name} activity in classrooms:')
 
-    activity_classroom_one = []
-    activity_classroom_two = []
-
-    for student in activity:
-        if student in classroom_one:
-            activity_classroom_one.append(student)
-        elif student in classroom_two:
-            activity_classroom_two.append(student)
+    activity_classroom_one = set(classroom_one) & set(activity)
+    activity_classroom_two = set(classroom_two) & set(activity)
 
     print(f'C1:\n{activity_classroom_one}\n')
     print(f'C2:\n{activity_classroom_two}')
